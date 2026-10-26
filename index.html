@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroShift 2099 - Support &amp; Privacy Policy</title>
+    <meta name="description" content="AeroShift 2099 Official Support & Privacy Policy Page. iOS 3D Free-Flight Sky Surfing Action.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #07060e;
+            --card-bg: rgba(18, 15, 34, 0.75);
+            --card-border: rgba(0, 240, 255, 0.25);
+            --neon-cyan: #00f0ff;
+            --neon-purple: #bc13fe;
+            --neon-magenta: #ff007f;
+            --text-main: #f0f0f5;
+            --text-sub: #9e9ebb;
+            --accent-glow: rgba(0, 240, 255, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Rajdhani', 'Noto Sans JP', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Cyberpunk Ambient Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: -20%;
+            left: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(188, 19, 254, 0.18) 0%, transparent 70%);
+            filter: blur(80px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            bottom: -20%;
+            right: -10%;
+            width: 70vw;
+            height: 70vw;
+            background: radial-gradient(circle, rgba(0, 240, 255, 0.16) 0%, transparent 70%);
+            filter: blur(90px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 24px 20px 80px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--neon-cyan), #ffffff, var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .logo-tag {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--neon-cyan);
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(0, 240, 255, 0.12);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-sub);
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 13px;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.25s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--neon-cyan);
+            color: #07060e;
+            box-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 40px 16px 50px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 240, 255, 0.05);
+            backdrop-filter: blur(12px);
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 38px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #ffffff 30%, var(--neon-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .nav-chips {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .nav-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(0, 240, 255, 0.08);
+            border: 1px solid var(--neon-cyan);
+            color: var(--neon-cyan);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.25s ease;
+        }
+
+        .nav-chip:hover {
+            background: var(--neon-cyan);
+            color: #000;
+            box-shadow: 0 0 16px var(--neon-cyan);
+        }
+
+        /* Card Section */
+        .section-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 32px 28px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .section-card:hover {
+            border-color: rgba(0, 240, 255, 0.35);
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--neon-cyan);
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+        }
+
+        .section-title::before {
+            content: "///";
+            color: var(--neon-purple);
+            font-weight: 900;
+        }
+
+        .content-block {
+            margin-bottom: 22px;
+        }
+
+        .content-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-block h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .content-block p, .content-block ul {
+            color: var(--text-sub);
+            font-size: 15px;
+        }
+
+        .content-block ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .content-block ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        .content-block ul li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+            color: var(--neon-cyan);
+            top: 4px;
+        }
+
+        /* Contact Highlight Box */
+        .contact-box {
+            background: linear-gradient(135deg, rgba(188, 19, 254, 0.12), rgba(0, 240, 255, 0.12));
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .contact-box a {
+            color: var(--neon-cyan);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 1px;
+            border-bottom: 1px dashed var(--neon-cyan);
+            transition: all 0.2s ease;
+        }
+
+        .contact-box a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px var(--neon-cyan);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 50px;
+        }
+
+        .lang-en {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            .section-card {
+                padding: 24px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <header>
+        <div class="logo-group">
+            <span class="logo">AeroShift 2099</span>
+            <span class="logo-tag">iOS APP</span>
+        </div>
+        <div class="lang-switch">
+            <button class="lang-btn active" id="btn-ja" onclick="setLang('ja')">日本語</button>
+            <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1 class="lang-ja">サポート ＆ プライバシーポリシー</h1>
+        <h1 class="lang-en">Support &amp; Privacy Policy</h1>
+        <p class="lang-ja">『AeroShift 2099』の公式サポート情報およびプライバシーポリシーのご案内です。</p>
+        <p class="lang-en">Official support information and privacy policy for AeroShift 2099.</p>
+        <div class="nav-chips">
+            <a href="#support" class="nav-chip"><span>⚡</span> <span class="lang-ja">サポート案内</span><span class="lang-en">Support</span></a>
+            <a href="#privacy" class="nav-chip"><span>🛡️</span> <span class="lang-ja">プライバシーポリシー</span><span class="lang-en">Privacy Policy</span></a>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="section-card">
+        <h2 class="section-title lang-ja">サポート情報 (Support)</h2>
+        <h2 class="section-title lang-en">Support Information</h2>
+
+        <div class="lang-ja">
+            <div class="content-block">
+                <h3>ゲームの概要と操作方法</h3>
+                <p>『AeroShift 2099』は、2099年の超高層摩天楼の上空を反重力スカイボードで駆け抜ける3D高速フライトアクションゲームです。画面をドラッグすることでスカイボードを360度自在にマニューバ（上昇・下降・旋回・スラローム）できます。</p>
+            </div>
+
+            <div class="content-block">
+                <h3>よくあるご質問 (FAQ)</h3>
+                <ul>
+                    <li><strong>Q. 世界ランキング（Game Center）が表示されません:</strong><br>
+                    iOSの「設定」アプリ &gt;「Game Center」にサインインしているかご確認ください。オフライン時や通信が不安定な環境では、端末内に保存されたローカルハイスコアが暫定表示されます。通信が回復すると自動的に同期されます。</li>
+                    <li><strong>Q. 動作対象機種について:</strong><br>
+                    iOS 17.0 以降を搭載した iPhone および iPad に対応しております。完全な縦画面（Portrait）専用設計となっています。</li>
+                    <li><strong>Q. 課金要素や広告について:</strong><br>
+                    アプリ内課金（In-App Purchase）やサブスクリプションは一切ございません。完全無料で全ステージ・全機能をお楽しみいただけます。なお、本ゲームを完全無料で提供し続けるため、タイトル画面、リザルト画面、および一定回数のリトライ時にGoogle AdMobによる広告が表示されます（※フライト操作中は画面に広告が一切表示されませんのでご安心ください）。</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>お問い合わせ・不具合報告</h3>
+                <p>ご意見・不具合のご報告・ご質問は、下記のお問い合わせ先よりお気軽にご連絡ください。開発チームにて確認の上、迅速に対応いたします。</p>
+                <div class="contact-box">
+                    <p style="margin-bottom: 6px; font-weight: bold; color: #fff;">サポート窓口 (Support Contact)</p>
+                    <a href="mailto:lldkinn9@gmail.com">lldkinn9@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="lang-en">
+            <div class="content-block">
+                <h3>About &amp; Controls</h3>
+                <p>AeroShift 2099 is a fast-paced 3D sky-surfing flight action game set in a futuristic 2099 megalopolis. Drag on the screen to perform complete 3D maneuvers (pitch, roll, yaw, slalom) to dodge towering obstacles and ride airflow currents.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>Frequently Asked Questions (FAQ)</h3>
+                <ul>
+                    <li><strong>Q. The World Leaderboard does not load:</strong><br>
+                    Please ensure that you are signed in to Game Center in your iOS Settings app. In offline or unstable network situations, your locally stored high score will be displayed gracefully and synced once connectivity is restored.</li>
+                    <li><strong>Q. Supported Devices &amp; OS:</strong><br>
+                    Requires iOS 17.0 or later on compatible iPhone and iPad devices. Strictly locked to Portrait orientation for optimal single-handed experience.</li>
+                    <li><strong>Q. Are there any in-app purchases or ads?:</strong><br>
+                    All gameplay features are 100% free with zero in-app purchases or subscriptions. To maintain free service, non-intrusive advertisements powered by Google AdMob are displayed on the title, game-over screens, and intermittently upon retrying (advertisements are NEVER displayed during active flight gameplay).</li>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h3>Contact &amp; Bug Reports</h3>
+                <p>For feedback, bug reports, or inquiries, please contact our support team:</p>
+                <div class="contact-box">
+                    <p style="margin-bottom: 6px; font-weight: bold; color: #fff;">Support Contact</p>
+                    <a href="mailto:lldkinn9@gmail.com">lldkinn9@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy" class="section-card">
+        <h2 class="section-title lang-ja">プライバシーポリシー (Privacy Policy)</h2>
+        <h2 class="section-title lang-en">Privacy Policy</h2>
+
+        <div class="lang-ja">
+            <div class="content-block">
+                <h3>1. 個人情報の非収集について</h3>
+                <p>本アプリ『AeroShift 2099』（以下、「本アプリ」）は、ユーザーの氏名、住所、電話番号、メールアドレス、詳細な位置情報、連絡先などの個人情報を直接収集・保存することはありません。</p>
+            </div>
+
+            <div class="content-block">
+                <h3>2. 広告配信（Google AdMob）および App Tracking Transparency について</h3>
+                <p>本アプリは、無料でのサービス提供を維持するため、Google LLCが提供する広告配信サービス「Google AdMob」を利用しています。Google AdMobは、広告配信や不正防止、効果測定の目的で端末識別子や広告データを収集する場合があります。</p>
+                <p>iOS 14以降の端末では、Appleのガイドラインに従い、初回起動時に「App Tracking Transparency（ATT）」によるトラッキング許可ダイアログを表示します。ユーザーがトラッキングを許可した場合のみ、パーソナライズされた広告の配信のために広告識別子（IDFA）が使用されます。許可しなかった場合でもゲームの全機能は通常どおりご利用いただけます。</p>
+            </div>
+
+            <div class="content-block">
+                <h3>3. Apple Game Center（GameKit）の利用</h3>
+                <p>本アプリは、世界ランキング機能（Leaderboard）を提供するために、Apple社が提供する公式フレームワーク「GameKit」を利用しています。Game Centerにサインインしている場合、プレイヤー名およびハイスコアのみがApple社のサーバーへ安全に送信され、ランキングとして世界中のプレイヤーに公開されます。本アプリの開発者がこれらの情報を独自サーバー等に収集・蓄積することはありません。</p>
+            </div>
+
+            <div class="content-block">
+                <h3>4. 端末内ローカルデータの保存（UserDefaults）</h3>
+                <p>本アプリは、ゲームのベストスコアおよびBGMのON/OFF設定を保存する目的でのみ、端末内のローカルストレージ（UserDefaults）を使用します。このデータが端末の外部へ不正に送信されることはありません（Appleの公式プライバシーマニフェスト理由コード CA92.1 準拠）。</p>
+            </div>
+
+            <div class="content-block">
+                <h3>5. プライバシーポリシーの改定</h3>
+                <p>本ポリシーは、法令やアプリ機能の更新に伴い改定されることがあります。改定が行われた場合は本ページにて告知いたします。</p>
+                <p style="margin-top: 8px; font-size: 13px; color: var(--neon-cyan);">改定日: 2026年10月26日（Phase 42 / v1.0.62）</p>
+            </div>
+        </div>
+
+        <div class="lang-en">
+            <div class="content-block">
+                <h3>1. Personal Data Handling</h3>
+                <p>AeroShift 2099 ("the App") does not directly collect, store, or transmit personal identity information such as names, postal addresses, phone numbers, email addresses, or contacts.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>2. Advertisements (Google AdMob) &amp; App Tracking Transparency</h3>
+                <p>To keep the App free for everyone, we use Google AdMob to serve advertisements. Google AdMob may collect and process device identifiers and advertising performance data in accordance with Google's Privacy Policy.</p>
+                <p>On iOS 14 and later, the App presents Apple's App Tracking Transparency (ATT) prompt. If you grant permission, your advertising identifier (IDFA) may be used to display personalized ads. If you decline, non-personalized ads are served, and all game features remain fully accessible.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>3. Apple Game Center (GameKit) Integration</h3>
+                <p>The App integrates with Apple's official GameKit framework to provide global leaderboards. When signed in, your public Game Center nickname and your best score are securely transmitted directly to Apple's Game Center servers. The developer operates no private servers to collect or retain this data.</p>
+            </div>
+
+            <div class="content-block">
+                <h3>4. Local Device Storage (UserDefaults)</h3>
+                <p>The App utilizes Apple's standard local storage (UserDefaults) exclusively for retaining your local best score and audio preferences on your device. This data never leaves your device (in full compliance with Apple Privacy Manifest reason code CA92.1).</p>
+            </div>
+
+            <div class="content-block">
+                <h3>5. Policy Revisions &amp; Contact</h3>
+                <p>Any updates to this policy will be posted on this page. If you have any inquiries, please contact: <a href="mailto:lldkinn9@gmail.com" style="color: var(--neon-cyan);">lldkinn9@gmail.com</a>.</p>
+                <p style="margin-top: 8px; font-size: 13px; color: var(--neon-cyan);">Effective Date: October 26, 2026 (Phase 42 / v1.0.62)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 lldkinn9 / AeroShift 2099. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+    function setLang(lang) {
+        document.querySelectorAll('.lang-ja').forEach(el => {
+            el.style.display = lang === 'ja' ? '' : 'none';
+        });
+        document.querySelectorAll('.lang-en').forEach(el => {
+            el.style.display = lang === 'en' ? '' : 'none';
+        });
+
+        document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        document.documentElement.lang = lang;
+    }
+
+    // Initialize with Japanese
+    setLang('ja');
+</script>
+
+</body>
+</html>
